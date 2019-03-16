@@ -1,0 +1,15 @@
+<!--pages/about/about.wxml-->
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+  <view class='text-center margin-bottom text-lg  text-grey'>关于连银科技</view>
+  <view class='text-content'>
+    <view class='margin-top-sm'>一、信贷系统产品！</view>
+    <view class='margin-top-sm'>为风险资产经营机构提供贷前、贷中、贷后全流程信贷管理，实现集中控制审批业务的信用风险和操作风险</view>
+     <view class='margin-top-sm'>二、风险管理产品！</view>
+    <view class='margin-top-sm'>为银行业、互联网金融、消费金融、车贷等行业提供一整套的数据特征挖掘、模型构建系统、决策引擎、定制化建模服务</view>
+    <view class='margin-top-sm'>三、术链系统！</view>
+    <view class='margin-top-sm'>为资产和资金方提供撮合技术对接，实现金融生态聚合服务，并提供行业整体解决方案</view>
+    <view class='margin-top-sm'>四、投融资平台！</view>
+    <view class='margin-top-sm'>为银行和网贷公司提供资产端到投资端的一站式网络借贷撮合解决方案</view>
+    <view class='margin-top-sm'>更多功能敬请期待！</view>
+  </view>
+</view>

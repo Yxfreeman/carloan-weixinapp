@@ -1,0 +1,32 @@
+<!--pages/mine/mine.wxml-->
+<view class='UCenter-bg'>
+  <image src='/images/logo.jpg' class='png logo-icon' mode='widthFix'></image>
+  <view class='text-xl mine-title'>车贷系统
+    <text class='text-df'>v2.0</text>
+  </view>
+  <view class='margin-top-sm'>
+    <text>By:张思轶</text>
+  </view>
+  <image src='https://image.weilanwl.com/gif/wave.gif' mode='scaleToFill' class='gif-wave'></image>
+</view>
+<view class="cu-list menu card-menu margin-top-xl margin-bottom-xl shadow-lg">
+  <view class="cu-item arrow">
+    <view class='content'>
+      <text class='icon-settings icon-color'></text>
+      <text class='text-grey'>设置</text>
+    </view>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class='content' url='../about/about' hover-class='none'>
+      <text class='icon-edit icon-color'></text>
+      <text class='text-grey'>修改密码</text>
+    </navigator>
+  </view>
+  <view class="cu-item arrow">
+    <navigator class='content' url='../about/about' hover-class='none'>
+      <text class='icon-formfill icon-color'></text>
+      <text class='text-grey'>关于我们</text>
+    </navigator>
+  </view>
+</view>
+<view class='cu-tabbar-height'></view>

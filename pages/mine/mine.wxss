@@ -1,0 +1,60 @@
+/* pages/mine/mine.wxss */
+.UCenter-bg {
+  /* background-image: url(https://image.weilanwl.com/color2.0/index.jpg); */
+  background-color: #1E72DA;
+  background-size: cover;
+  height: 550 rpx;
+  display: flex;
+  justify-content: center;
+  padding-top: 40 rpx;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.logo-icon {
+  width: 100px !important;
+}
+
+.mine-title {
+  margin-top: 15 rpx;
+}
+
+.UCenter-bg text {
+  opacity: 0.8;
+}
+
+.UCenter-bg image {
+  width: 200 rpx;
+  height: 200 rpx;
+}
+
+.UCenter-bg .gif-wave {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;
+  height: 100 rpx;
+}
+
+map, .mapBox {
+  left: 0;
+  z-index: 99;
+  mix-blend-mode: screen;
+  height: 100 rpx;
+}
+
+map, .mapBox {
+  width: 750 rpx;
+  height: 300 rpx;
+}
+
+.icon-color {
+  color: #1E72DA;
+}
