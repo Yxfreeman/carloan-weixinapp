@@ -1,0 +1,18 @@
+<!--pages/message/message.wxml-->
+<view>
+  <view class="cu-timeline">
+    <view class='cu-item text-blue' wx:for="{{messageList}}">
+      <view class="message-bg-color content shadow-blur">
+        <view class="cu-capsule radius text-white">
+          <view class="cu-tag bg-white text-blue">{{item.name}}</view>
+          <view class="cu-tag line-white">{{item.createTime}}</view>
+        </view>
+        <view class='margin-top-sm text-content text-white'>
+          <view>标题：{{item.title}}</view>
+          <view>内容：{{item.content}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <van-notify id="van-notify"/>
+</view>

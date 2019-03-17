@@ -3,7 +3,8 @@ import Notify from '../components/vant-weapp/dist/notify/notify';
 
 const baseUrl = 'http://47.98.239.167:8035';
 
-export function createApiRequest(url, data = {}, callback, method = 'POST', checkToken = true) {
+export function createApiRequest(options) {
+  const {method = 'POST', url, callback, data = {}, checkToken = true} = options;
   return new Promise((resolve, reject) => {
     wx.request({
       url: baseUrl + url,

@@ -1,8 +1,6 @@
 // pages/login/login.js
 import {createApiRequest} from '../../utils/request.js';
 
-const regeneratorRuntime = require("../../utils/regenerator-runtime/runtime");
-
 const app = getApp();
 Page({
 
@@ -69,23 +67,23 @@ Page({
 
   },
   changeLoading: function () {
-    console.log(this.data);
-    const loading = !this.data.loading;
     this.setData({
-      loading
+      loading: !this.data.loading
     })
   },
   login: function (e) {
     const {detail: {value}} = e;
     this.changeLoading();
-    createApiRequest('/auth/user/login', value, () => {
-      this.changeLoading();
-    }, 'POST', false).then((data) => {
+    createApiRequest({
+      url: '/auth/user/login',
+      data: value,
+      callback: this.changeLoading,
+      checkToken: false
+    }).then((data) => {
       if (data) {
         const {token} = data;
         wx.setStorageSync('token', token);
         wx.setStorageSync('userInfo', JSON.stringify(data));
-
         wx.switchTab({
           url: '/pages/home/home'
         })

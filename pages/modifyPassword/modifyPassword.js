@@ -1,5 +1,6 @@
-// pages/home/home.js
-import {createApiRequest} from '../../utils/request.js';
+// pages/modifyPassword/modifyPassword.js
+import {createApiRequest} from "../../utils/request";
+import Toast from '../../components/vant-weapp/dist/toast/toast';
 
 Page({
 
@@ -7,14 +8,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-   
+
   },
 
   /**
@@ -28,18 +28,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const token = wx.getStorageSync('token');
-    if (!token) {
-      wx.navigateTo({
-        url: '/pages/login/login'
-      })
-    }else {
-     createApiRequest({
-       url: '/sulian/otherChannel/querySTSInfo'
-     }).then((data) => {
-       wx.setStorageSync('stsInfo', JSON.stringify(data));
-     });
-    }
+
   },
 
   /**
@@ -75,5 +64,21 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  modifyPassword: function (e) {
+    const {detail: {value}} = e;
+    createApiRequest({
+      url: '/auth/user/passwordChange',
+      data: value,
+      callback: this.changeLoading,
+    }).then(() => {
+      Toast('修改成功');
+      setTimeout(() => {
+        wx.clearStorageSync();
+        wx.navigateTo({
+          url: '/pages/login/login'
+        })
+      },500)
+    })
   }
 });

@@ -17,7 +17,7 @@
     </view>
   </view>
   <view class="cu-item arrow">
-    <navigator class='content' url='../about/about' hover-class='none'>
+    <navigator class='content' url='../modifyPassword/modifyPassword' hover-class='none'>
       <text class='icon-edit icon-color'></text>
       <text class='text-grey'>修改密码</text>
     </navigator>

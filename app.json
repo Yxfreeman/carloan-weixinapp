@@ -3,7 +3,9 @@
     "pages/home/home",
     "pages/login/login",
     "pages/mine/mine",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/modifyPassword/modifyPassword",
+    "pages/message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -30,7 +32,7 @@
         "text": "订单"
       },
       {
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/message/message",
         "iconPath": "/images/tabbar/bar-message.png",
         "selectedIconPath": "/images/tabbar/bar-message-active.png",
         "text": "消息"
@@ -44,6 +46,9 @@
     ]
   },
   "usingComponents": {
-    "van-notify": "../components/vant-weapp/dist/notify/index"
+    "van-notify": "../components/vant-weapp/dist/notify/index",
+    "van-field": "../components/vant-weapp/dist/field/index",
+    "van-icon": "../components/vant-weapp/dist/icon/index",
+    "van-toast": "../components/vant-weapp/dist/toast/index"
   }
 }

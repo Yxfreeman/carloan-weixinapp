@@ -1,5 +1,7 @@
 @import "icon.wxss";
 @import "colorui.wxss";
+@import "./components/vant-weapp/dist/common/index.wxss";
+@import "./components/vant-weapp/dist/icon/index.wxss";
 
 .nav-list {
   display: flex;
