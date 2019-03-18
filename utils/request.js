@@ -20,7 +20,6 @@ export function createApiRequest(options) {
         'Content-Type': 'application/json;charset=UTF-8',
       },
       success: (response) => {
-        console.log(response);
         if (response.statusCode >= 200 && response.statusCode < 300) {
           const code = response.data.code;
           if (code === "000000") {

@@ -5,7 +5,9 @@
     "pages/mine/mine",
     "pages/about/about",
     "pages/modifyPassword/modifyPassword",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/order/order",
+    "pages/customer/customer"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -26,7 +28,7 @@
         "text": "首页"
       },
       {
-        "pagePath": "pages/home/home",
+        "pagePath": "pages/order/order",
         "iconPath": "/images/tabbar/bar-order.png",
         "selectedIconPath": "/images/tabbar/bar-order-active.png",
         "text": "订单"

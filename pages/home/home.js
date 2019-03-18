@@ -9,21 +9,6 @@ Page({
   data: {
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-   
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
   /**
    * 生命周期函数--监听页面显示
    */
@@ -34,46 +19,35 @@ Page({
         url: '/pages/login/login'
       })
     }else {
-     createApiRequest({
-       url: '/sulian/otherChannel/querySTSInfo'
-     }).then((data) => {
-       wx.setStorageSync('stsInfo', JSON.stringify(data));
-     });
+      this.fetchStsInfo();
+      this.fetchDictData();
     }
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  fetchStsInfo: function() {
+    createApiRequest({
+      url: '/sulian/otherChannel/querySTSInfo'
+    }).then((data) => {
+      wx.setStorageSync('stsInfo', JSON.stringify(data));
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  fetchDictData: function () {
+    createApiRequest({
+      url: '/credit/confDict/queryForList',
+      data: {constantConfType: '2'}
+    }).then((data) => {
+      wx.setStorageSync('dictionary', JSON.stringify(this.formatDictionary(data)));
+    });
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  formatDictionary: function(data = []) {
+    let dictionary = {};
+    for (const dict of data) {
+      const { paramKey: code, paramValue: value, paramType } = dict;
+      if (!dictionary[paramType]) {
+        dictionary[paramType] = [{code, value}];
+      } else {
+        dictionary[paramType].push({code, value});
+      }
+    }
+    return dictionary;
   }
 });

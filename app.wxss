@@ -134,3 +134,6 @@
 .form-have-bottom-border {
   border-bottom:1rpx solid #eee
 }
+.bg-color {
+  background-color: #1E72DA !important;
+}

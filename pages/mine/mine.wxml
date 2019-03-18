@@ -28,5 +28,30 @@
       <text class='text-grey'>关于我们</text>
     </navigator>
   </view>
+  <view class="cu-item arrow">
+    <view class='content' bindtap="openLogoutModal">
+      <text class='icon-roundclose icon-color'></text>
+      <text class='text-grey'>退出登录</text>
+    </view>
+  </view>
+</view>
+<view class="cu-modal {{logoutModalVisible ?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class='content'>退出登录</view>
+      <view class='action' bindtap='hideModal'>
+        <text class='icon-close text-red'></text>
+      </view>
+    </view>
+    <view class='padding-xl'>
+      确认退出登录吗？
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class='action'>
+        <button class='cu-btn line-blue text-green' bindtap='hideModal'>取消</button>
+        <button class='cu-btn bg-color margin-left' bindtap='logout'>确定</button>
+      </view>
+    </view>
+  </view>
 </view>
 <view class='cu-tabbar-height'></view>

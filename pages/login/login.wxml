@@ -18,8 +18,4 @@
     </form>
   </view>
   <van-notify id="van-notify"/>
-  <!-- <view class='cu-load load-modal' wx:if="{{loading}}"> 
-    <image src='/images/logo.jpg' class='png' mode='aspectFit'></image>
-    <view class='gray-text'>加载中...</view>
-</view> -->
 </view>

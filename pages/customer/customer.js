@@ -1,11 +1,11 @@
-// pages/mine/mine.js
+// pages/customer/customer.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    logoutModalVisible: false
+
   },
 
   /**
@@ -62,22 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  logout: function () {
-    wx.clearStorageSync();
-    this.hideModal();
-    wx.navigateTo({
-      url: '/pages/login/login'
-    })
-  },
-  openLogoutModal: function() {
-    this.setData({
-      logoutModalVisible: true
-    })
-  },
-  hideModal: function () {
-    this.setData({
-      logoutModalVisible: false
-    })
   }
 });

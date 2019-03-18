@@ -58,3 +58,6 @@ map, .mapBox {
 .icon-color {
   color: #1E72DA;
 }
+.bg-color {
+  color: #fff;
+}
