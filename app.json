@@ -7,7 +7,8 @@
     "pages/modifyPassword/modifyPassword",
     "pages/message/message",
     "pages/order/order",
-    "pages/customer/customer"
+    "pages/customer/customer",
+    "pages/customerDetail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

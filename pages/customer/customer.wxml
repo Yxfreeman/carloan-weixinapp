@@ -10,7 +10,7 @@
     </view>
   </view>
   <scroll-view class="order-wrap" wx:if="{{customerList.length > 0}}">
-    <view class="order-item" wx:for="{{customerList}}" wx:key>
+    <navigator class="order-item" wx:for="{{customerList}}" wx:key url='../customerDetail/index?customerId={{item.customerId}}' hover-class='none'>
       <view class="customer-top">
         <text class='icon-profile'></text>
         <text class="customer-name">客户：</text>
@@ -47,7 +47,7 @@
           <button class='cu-btn round line-blue shadow customer-action-btn' >互联网征信</button>
         </navigator>
       </view>
-    </view>
+    </navigator>
   </scroll-view>
   <view class='cu-load load-modal' wx:if="{{firstLoading}}">
     <image src='/images/logo.jpg' class='png' mode='aspectFit'></image>
