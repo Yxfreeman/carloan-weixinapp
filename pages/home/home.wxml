@@ -67,7 +67,9 @@
       </view>
     </view>
     <view class='customer-enter-btn'>
-     <button class='cu-btn block bg-blue margin-tb-sm lg ' >客户管理</button>
+      <navigator url='../customer/customer' hover-class='none'>
+        <button class='cu-btn block bg-blue margin-tb-sm lg ' >客户管理</button>
+      </navigator>
     </view>
   <van-notify id="van-notify" />
   </view>
