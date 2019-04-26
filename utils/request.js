@@ -1,7 +1,7 @@
 import {getRandomStr} from './index'
 import Notify from '../components/vant-weapp/dist/notify/notify';
 
-const baseUrl = 'http://47.98.239.167:8035';
+const baseUrl = 'http://116.62.152.199:8035';
 
 export function createApiRequest(options) {
   const {method = 'POST', url, callback, data = {}, checkToken = true} = options;

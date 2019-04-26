@@ -1,8 +1,8 @@
 <!--pages/mine/mine.wxml-->
 <view class='UCenter-bg'>
-  <image src='/images/logo.jpg' class='png logo-icon' mode='widthFix'></image>
+  <image src='/images/logo.png' class='png logo-icon' mode='widthFix'></image>
   <view class='text-xl mine-title'>车贷系统
-    <text class='text-df'>v2.0</text>
+    <text class='text-df'>v1.0</text>
   </view>
   <view class='margin-top-sm'>
     <text>By:张思轶</text>
@@ -25,7 +25,7 @@
   <view class="cu-item arrow">
     <navigator class='content' url='../about/about' hover-class='none'>
       <text class='icon-formfill icon-color'></text>
-      <text class='text-grey'>关于我们</text>
+      <text class='text-grey'>关于me</text>
     </navigator>
   </view>
   <view class="cu-item arrow">

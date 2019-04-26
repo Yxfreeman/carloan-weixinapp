@@ -1,7 +1,7 @@
 /* pages/login/login.wxss */
 .login-logo {
-  width: 495rpx;
-  height: 150rpx;
+  width: 200rpx;
+  height: 200rpx;
 }
 
 .login-warp {
